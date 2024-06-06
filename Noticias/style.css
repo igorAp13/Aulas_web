@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+a {
+    font-family: 'Courier New', Courier, monospace;
+    color: red;
+}
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(116, 116, 116, 0.712);
+}
+
+h2 {
+    background-color: rgba(138, 131, 131, 0.356);
+}
+h3 {
+    background-color: rgba(112, 106, 106, 0.192);
+}
+
+p {
+    text-align: justify;
+    font-family: 'Courier New', Courier, monospace;
+}
