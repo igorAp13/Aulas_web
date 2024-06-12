@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Personalidade e Saúde Mental</title>
+</head>
+<body>
+    <h1>Formulário de Personalidade e Saudé Mental</h1>
+    <form action="#" method="get" oninput="resultado.value=(parseInt(numero1.value)+parseInt(numero2.value))">
+        <h2>Suas Caracteristicas Positivas</h2>
+
+        <label for="caracteristicas">Marque as Caracteristicas que mais combinam com você:</label>
+        
+        <br><br>
+
+        <input type="checkbox" name="caracteristicas" id="idAlegre" value="Alegre">
+        <label for="idalegre">Alegre</label>
+        
+        <br>
+        
+        <input type="checkbox" name="caracteristicas" id="idAmigavel" value="Amigável">
+        <label for="idamigavel">Amigável</label>
+        
+        <br>
+
+        <input type="checkbox" name="caracteristicas" id="idCriativo" value="Criativo">
+        <label for="idcriativo">Criativo</label>
+        
+        <br>
+
+        <input type="checkbox" name="caracteristicas" id="idCurioso" value="Curioso">
+        <label for="idcurioso">Curioso</label>
+        
+        <br>
+
+        <input type="checkbox" name="caracteristicas" id="idEmpatico" value="Empático">
+        <label for="idempatico">Empático</label>
+        
+        <br>
+
+        <input type="checkbox" name="caracteristicas" id="idGeneroso" value="Generoso">
+        <label for="idgeneroso">Generoso</label>
+        
+        <br>
+
+        <input type="checkbox" name="caracteristicas" id="idInteligente" value="Inteligente">
+        <label for="idInteligente">Inteligente</label>
+        
+        <br>
+
+        <input type="checkbox" name="caracteristicas" id="idOrganizado" value="Organizado">
+
+        <label for="idorganizado">Organizado</label> 
+
+        <br><hr>
+
+        <h2>Saúde Mental</h2>
+
+        
+            <label for="identifica">Selecione o que melhor se identifica:</label>
+            <select name="indentifica" id="idIdentifica" required+>
+                <optgroup label="Psicólogo">
+                    <option value="nunca-fui">Nunca fui</option>
+                    <option value="ja-fui">Já fui</option>
+                    <option value="estou-indo">Estou Indo</option>
+                </optgroup>
+                <optgroup label="Outro Profissional">
+                    <option value="outro">Outro</option>
+                    <option value="nunca">Nunca</option>
+                </optgroup>
+            </select>
+    
+        
+        <fieldset>
+            <legend>Conclusão</legend>
+
+            <label for="soma">faça a soma e conclua o cadastro:</label>
+
+            <br><br>
+
+            <label for="">Número 1:</label>
+            <input type="number" name="numero1" id="idNumero1">
+            <br><br>
+            <label for="">Número 2:</label>
+            <input type="number" name="numero2" id="idNumero2">
+            <br><br>
+            <label for="resultado">Resultado da soma:</label>
+            <output name="resultado" id="resultado">0</output>
+        </fieldset>
+
+        <br><br>
+
+        <button onclick="verificarCaracteristicas()">Enviar</button>
+        <input type="reset" value="Limpar">
+
+        <br>
+
+        <a href="form.html">PRIMEIRA PÀGINA</a>
+    </form>
+</body>
+</html>
