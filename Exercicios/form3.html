@@ -16,32 +16,32 @@
         <br><br>
 
         <input type="checkbox" name="caracteristicas" id="idAlegre" value="Alegre">
-        <label for="idalegre">Alegre</label>
+        <label for="idAlegre">Alegre</label>
         
         <br>
         
         <input type="checkbox" name="caracteristicas" id="idAmigavel" value="Amigável">
-        <label for="idamigavel">Amigável</label>
+        <label for="idAmigavel">Amigável</label>
         
         <br>
 
         <input type="checkbox" name="caracteristicas" id="idCriativo" value="Criativo">
-        <label for="idcriativo">Criativo</label>
+        <label for="idCriativo">Criativo</label>
         
         <br>
 
         <input type="checkbox" name="caracteristicas" id="idCurioso" value="Curioso">
-        <label for="idcurioso">Curioso</label>
+        <label for="idCurioso">Curioso</label>
         
         <br>
 
         <input type="checkbox" name="caracteristicas" id="idEmpatico" value="Empático">
-        <label for="idempatico">Empático</label>
+        <label for="idEmpatico">Empático</label>
         
         <br>
 
         <input type="checkbox" name="caracteristicas" id="idGeneroso" value="Generoso">
-        <label for="idgeneroso">Generoso</label>
+        <label for="idGeneroso">Generoso</label>
         
         <br>
 
@@ -52,7 +52,7 @@
 
         <input type="checkbox" name="caracteristicas" id="idOrganizado" value="Organizado">
 
-        <label for="idorganizado">Organizado</label> 
+        <label for="idOrganizado">Organizado</label> 
 
         <br><hr>
 
@@ -99,5 +99,25 @@
 
         <a href="form.html">PRIMEIRA PÀGINA</a>
     </form>
+
+    <script>
+        function verificarCaracteristicas() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            let selectCount = 0;
+
+            for (const checkbox of checkboxes) {
+                if (checkbox.checked){
+                    selectCount++;
+                }
+            }
+            if (selectCount < 1) {
+                alert('Selecione pelo menos 1 características');
+            }  else if (selectCount > 3){
+                alert('Selecione no maxímo 3 características!');
+            }  else{
+                alert('Você selecionou' + selectCount + 'características. Suas informações foram salvas! Boa sorte!');
+            }
+        }
+    </script>
 </body>
 </html>
