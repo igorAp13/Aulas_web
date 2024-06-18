@@ -1,0 +1,39 @@
+
+body {
+  background-color: rgb(247, 136, 136);
+}
+
+
+.paragrafo {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 15px;
+    line-height: 1.5; /*distancia entre linhas*/
+    margin: 5px;
+    text-indent: 1em;/*espaço na primeira linha do texto*/
+    text-align: justify;
+    background-color: chartreuse;
+}
+
+.p {
+    text-decoration: underline;
+    margin: 10px;
+    text-align: right; 
+    color: white;
+} 
+
+.paragrafo2 {
+    background-color: rgb(236, 253, 0);
+    color: blue;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 22px;
+    padding: 1px;
+    text-align: right;
+    line-height: 1.5;
+}
+
+#meuId {
+    margin-top: 25px;
+    border: 5px rgb(255, 0, 128) dotted;
+    padding: 15px;
+}
