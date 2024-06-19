@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
     <title>Perfumaria</title>
 </head>
 <body>
@@ -12,32 +13,26 @@
         
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <ul>
-                    <li><a href="Noticias.html">Notícias</a></li>
-                    <li><a href="Resenha.html">Resenhas</a></li>
-                </ul>
+                <li class="dropdown"><a href="index.html">Home</a>
+                    <ul class="dropdown-child">
+                        <li><a href="Noticias.html">Notícias</a></li>
+                        <li><a href="Resenha.html">Resenhas</a></li>
+                    </ul>
+                </li>
+        
+                <li class="dropdown"><a href="Galeria.html">Galeria</a></li>
+        
+                <li class="dropdown"><a href="#">Categorias</a>
+                    <ul class="dropdown-child">
+                        <li><a href="#">Perfumes Femininos</a></li>
+                        <li><a href="#">Perfumes Masculinos</a></li>
+                        <li><a href="#">Perfumes Unissex</a></li>
+                        <li><a href="#">Niche Perfumes</a></li>
+                        <li><a href="#">Marcas</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="Contato.html">Contato</a></li>
             </ul>
-    
-            <ul>
-                <li><a href="Galeria.html">Galeria</a></li>
-            </ul>
-    
-            <ul>
-                <li><a href="#">Categorias</a></li>
-                <ul>
-                    <li><a href="#">Perfumes Femininos</a></li>
-                    <li><a href="#">Perfumes Masculinos</a></li>
-                    <li><a href="#">Perfumes Unissex</a></li>
-                    <li><a href="#">Niche Perfumes</a></li>
-                    <li><a href="#">Marcas</a></li>
-                </ul>
-            </ul>
-    
-            <ul>
-                <li><a href="Contato.html">Contato</a></li>
-            </ul>
-            <br>
         </nav>
     </header>
 
