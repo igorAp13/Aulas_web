@@ -1,8 +1,84 @@
-* {
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0;
+    padding: 0;
     background-color: black;
     color: #fff;
 }
 
+h1, h2 {
+    text-align: center;
+    font-size: 40px;
+}
+
+a:hover {
+    color: #f17f7f;
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+header {
+    background-color: #3d3c3c;
+    padding: 20px 0;
+    box-shadow: 0 2px 4px #fff;
+    text-align: center;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+    box-sizing: center;
+}
+
+section{
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+section h2{
+    margin-bottom: 20px;
+}
+ 
+h1{
+    font-size: 60px;
+}
+
+#imgnoticia{
+  
+    object-fit: cover;
+    transition: 0.3s ease;  
+}
+ 
+#imgnoticia:hover{
+    transform: scale(1.1);
+}
+ 
+#coluna{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;  
+}
+ 
+aside{
+    flex: 0 0 300px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+ 
+aside video{
+    width: 70%;
+    height: auto;
+}
+ 
 nav ul {
     list-style-type: none;/*tira a marcação da lista*/
     padding: 0;
@@ -28,6 +104,22 @@ nav ul li a:hover {
     border-radius: 7px;
 }
 
+#column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#banner{
+    padding: 0 0 0 0px ;
+    width: 100%;
+    height: 625px;
+    object-fit: cover;
+    overflow: hidden;
+}
+
 .dropdown-child {
     display: none;
     background-color: #fff;
@@ -51,4 +143,18 @@ nav ul li a:hover {
 
 .dropdown:hover .dropdown-child {
     display: block;
+}
+
+footer{
+    background-color: #5e5d5d5e;  
+    padding: 20px 0;
+    box-shadow: 4px 2px 4px 4px #fff;
+       
+    text-align: center;
+    list-style: none;
+    margin-inline: 0;
+}
+ 
+footer ul{
+    list-style: none;
 }
