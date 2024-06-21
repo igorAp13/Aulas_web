@@ -4,55 +4,56 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
     <title>Notícias</title>
 </head>
 <body>
     <header>
         <h1>Perfumaria News</h1>
+        
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <ul>
-                    <li><a href="Noticias.html">Notícias</a></li>
-                    <li><a href="Resenha.html">Resenha</a></li>
-                </ul>
+                <li class="dropdown"><a href="index.html">Home</a>
+                    <ul class="dropdown-child">
+                        <li><a href="Noticias.html">Notícias</a></li>
+                        <li><a href="Resenha.html">Resenhas</a></li>
+                    </ul>
+                </li>
+        
+                <li class="dropdown"><a href="Galeria.html">Galeria</a></li>
+        
+                <li class="dropdown"><a href="#">Categorias</a>
+                    <ul class="dropdown-child">
+                        <li><a href="#">Perfumes Femininos</a></li>
+                        <li><a href="#">Perfumes Masculinos</a></li>
+                        <li><a href="#">Perfumes Unissex</a></li>
+                        <li><a href="#">Niche Perfumes</a></li>
+                        <li><a href="#">Marcas</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown"><a href="Contato.html">Contato</a></li>
             </ul>
-       
-            <ul>
-                <li><a href="#">Galeria</a></li>
-            </ul>
-       
-            <ul>
-                <li><a href="#">Categorias</a></li>
-                <ul>
-                    <li><a href="">Perfumes Femininos</a></li>
-                    <li><a href="">Perfumes Masculinos</a></li>
-                    <li><a href="">Perfumes Unissex</a></li>
-                    <li><a href="">Niche Perfumes</a></li>
-                    <li><a href="">Marcas</a></li>
-                </ul>
-            </ul>
-       
-            <ul>
-                <li><a href="Contato.html">Contato</a></li>
-            </ul>
-        </nav>  
+        </nav>
+        <h2>Descubra o Mundo dos Perfumes</h2>
+          <img id="banner" src="imagens/perfume-um.jpg" alt="perfume triangulado" title="Perfume">
     </header>
     <br>
     <main>
         <section>
-            <article>
+            <article class="paragrafo">
                 <h2>Assunto perfume</h1>
                 <p>Mussum ipsum dolor sit amet consectetur adipisicing elit. Architecto ipsa voluptatibus ea nobis cupiditate optio, eius deserunt. Consequuntur quas quo in exercitationem consectetur, distinctio ratione quisquam delectus corrupti. Suscipit, harum!</p>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cum dolore recusandae fugiat alias est deserunt totam animi. Quam praesentium, perspiciatis asperiores velit repellat repellendus blanditiis earum nobis, temporibus facere deleniti.</p>
             </article>
-            <article>
+            <article class="paragrafo">
                 <h2>Assunto de perfume diferente</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum cumque optio sint fugiat? Veritatis nostrum laudantium nobis eveniet unde quae placeat, dolore assumenda. Reiciendis adipisci obcaecati molestias aut doloribus et.</p>
                 <p>Mussum ipsum dolor, sit amet consectetur adipisicing elit. Tempore velit illo, in, deserunt quibusdam illum vero neque dolores praesentium ullam explicabo a optio officiis dicta nisi facilis? Sapiente, nesciunt magni?</p>
             </article>
-            <article>
-                <iframe src="https://tribunademinas.com.br/" name="Tribuna" scrolling="auto" width="100%" height="100%" style="border: 2px solid #9272e9;"></iframe>
+            <article class="imagens">
+                <img  src="imagens/perfumecinco.jpeg" alt="perfume-bleu" title="perfume">
+                <img  src="imagens/perfumesix.jpeg" alt="perfume-giorgio" title="perfume">
+                <img  src="imagens/perfumeoito.jpeg" alt="perfume-prada" title="perfume">
             </article>
         </section>
         <br>
@@ -61,10 +62,10 @@
     <br><br>
     <footer>
         <p>&copy; 2024 Perfumaria News - Todos os direitos reservados.</p>
-        <ul>
+        
             <li><a href="https://github.com/igorAp13" target="_blank">Git Hub</a></li>
-        </ul>
-        <p><i>- Igor Ap</i></p>
+        
+        <p><i>Igor Ap</i></p>
     </footer>
 </body>
 </html>
