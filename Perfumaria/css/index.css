@@ -84,11 +84,8 @@ h1{
 }
 
 .imagens img {
-    
     width: 25%;
-   object-fit: cover;
-    
-    
+    object-fit: cover;
     border: 5px solid #5176f0;
     border-radius: 10px;
 }
