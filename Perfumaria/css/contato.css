@@ -1,0 +1,21 @@
+form {
+    background-color: #5e5d5d5e;
+    min-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 25px;
+    border: 2px solid #fff;
+}
+
+form label {
+    display: flex;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 8px;
+}
+
+form textarea {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 15px;
+    resize: none;
+}

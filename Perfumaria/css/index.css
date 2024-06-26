@@ -86,7 +86,7 @@ h1{
 .imagens img {
     width: 25%;
     object-fit: cover;
-    border: 5px solid #5176f0;
+    border: 5px solid #fff;
     border-radius: 10px;
 }
 .imagens{
@@ -94,6 +94,7 @@ h1{
     display:flex;
     justify-content: space-between;
     background-color: #2b2929;
+    border-radius: 15px;
     padding: 20px;
 }
  
@@ -181,7 +182,7 @@ footer{
     font-style: none;
     text-align: center;
     list-style: none;
-    margin-inline: 0;
+    margin-inline: 0;   
 }
  
 footer ul{
