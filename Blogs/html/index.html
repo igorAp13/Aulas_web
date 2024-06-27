@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/blog.css">
+    <title>Blogs</title>
+</head>
+<body>
+    <header>
+        <h1 id="titulo">Blog Yz</h1>
+
+       <nav>
+            <div class="menu">
+                <a href="#introducao">Indrodução</a>
+                <a href="#assunto-semana">Assunto Da Semana</a>
+                <a href="#horoscopo">Horóscopo</a>
+                <a href="#quem-sou-eu">Quem Sou Eu</a>
+                <a href="#contato">Contato</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+       <div id="introducao" class="section">
+            <h1>Introdução</h1>
+            <p>Bem-vindo ao meu blog! Aqui você encontrará uma variedade de conteúdos interessantes.</p>
+       </div>
+
+       <div id="assunto-semana" class="section">
+            <h1>Assunto da Semana</h1>
+            <p>Esta semana estamos discutindo...</p> 
+            <label for="dias-semana">Escolha um dia da semana:</label>
+            <select name="dias-semana" id="dias-semana" onchange="iframedia()">
+                <option value="">Selecione um dia</option>
+                <option value="segunda-feira.html">Segunda-feira</option>
+                <option value="terca-feira.html">Terca-feira</option>
+                <option value="quarta-feira.html">Quarta-feira</option>
+                <option value="quinta-feira.html">Quinta-feira</option>
+                <option value="sexta-feira.html">sexta-feira</option>
+            </select>
+            <iframe id="iframedia" src=""></iframe>
+       </div>
+
+       <div id="horoscopo" class="section">
+            <h1>Heróscopo</h1>
+            <p>Confira o seu horóscopo semananal...</p>
+       </div>
+
+       <div id="quem-sou-eu" class="section">
+            <h1>Quem Sou Eu</h1>
+            <p>Saiba mais sobre mim...</p>
+       </div>
+
+       <div id="contato" class="section">
+            <h1>Contato</h1>
+            <p>Entre em contato comigo através do GitHub abaixo...</p>
+       </div>
+    </main>
+
+    <script>
+        function iframedia() {
+            var select = document.getElementById("dias-semana");
+            var iframe = document.getElementById("iframedia");
+            var dia = select.value;
+        
+        if (dia) {
+                iframe.src = dia;
+                iframe.style.display = "block"; // Mostra o iframe
+            } 
+        else {
+                iframe.style.display = "none"; // Oculta o iframe se nenhum dia for selecionado
+            }
+        }
+    </script>
+</body>
+</html>
