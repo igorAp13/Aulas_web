@@ -5,7 +5,7 @@ if(idade <= 6){
     alert("Seja Bem-Vindo!!")
 }
 
-else if(idade >6  <=60){
+else if(idade >6 && idade <=60){
     alert('Paga passagem')
 }
 
