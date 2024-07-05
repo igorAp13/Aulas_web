@@ -5,10 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <h1>JS Externo</h1>
         <div id="info"></div>
+        <!--<textarea name="resultadoTextarea" id="resultadoTextarea" cols="30" rows="10"></textarea>-->
     <script>
     let ex = parseFloat(window.prompt('Qual exercício deseja ver? '));
  
@@ -76,6 +83,18 @@
         let script = document.createElement('script');
         script.src = 'semana.js';
         document.body.appendChild(script);
+    }
+    
+    else if (ex === 12) {
+        let script = document.createElement('script');
+        script.src = 'for.js';
+        document.body.appendChild(script);
+    }
+   
+    else if (ex === 13) {
+        let script = document.createElement('script');
+        script.src = 'tabuada.js';
+        document.body.appendChild(script);   
     }
 
     else {
