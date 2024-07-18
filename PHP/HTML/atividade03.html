@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>estilização</title>
+</head>
+<body>
+    <h1>Estilize o seu texto</h1>
+
+    <form action="../PHP/cor.php">
+        <label for="name">Digite o seu texto</label>
+        <input type="text" name="nome" id="idNome">
+        <br><br>
+
+        <label for="tamanho">Escolha o tamanho</label>
+       
+            <select name="tamanho" id="idTamanho">
+                <option value="12px">12</option>
+                <option value="24px">24</option>
+                <option value="36px">36</option>
+                <option value="72px">72</option>
+                <option value="100px">100</option>
+            </select>
+        <br><br>
+
+        <label for="cor">Escolha a sua cor</label>
+        <input type="color" name="cor" id="idCor">
+
+        <br><br>
+        <input type="submit" value="Personalize">
+    </form>
+   
+
+</body>
+</html>
