@@ -39,7 +39,9 @@
     
     <main>
         <h2>Entre em Contato Conosco</h2>
-        <form action="#" method="post">
+        <div id="messagebox" style="display: none; text-align: center;"></div>
+        <form action="../Perfumaria/PHP/salvarSMS.php" method="post">
+            
             <label for="nome">Nome</label>
             <input type="text" name="nome" id="idNome">
             <label for="assunto">Assunto</label>
@@ -50,9 +52,9 @@
                 <option value="duvida">Dúvida</option>
             </select>
 
-            <textarea name="" id="" cols="30" rows="10" maxlength="250"></textarea>
+            <textarea name="mensagem" id="idMensagem" cols="30" rows="10" maxlength="250"></textarea>
             <label for="email">E-mail</label>
-            <input type="email" name="emial" id="idEmail" placeholder="Escreva seu e-mail">
+            <input type="email" name="email" id="idEmail" placeholder="Escreva seu e-mail">
             <input type="submit" value="Enviar">
             <input type="reset" value="Cancelar">
         </form>
@@ -65,5 +67,24 @@
         
         <p><i>Igor Ap</i></p>
     </footer>
+
+    <script>
+        window.onload = function(){
+            const urlParams = new URLSearchParams(window.location.search);
+            const status = urlParams.get('status');
+            const messagebox = document.getElementById('messagebox');
+ 
+            if (status === 'success'){
+                messagebox.style.display = 'block';
+                messagebox.innerHTML = 'Mensagem enviada com sucesso!';
+                messagebox.style.color = 'green';
+            }
+            else if (status === 'error'){
+                messagebox.style.display = 'block';
+                messagebox.innerHTML = 'Houve um erro ao enviar a mensagem';
+                messagebox.style.color = 'red';
+            }
+        }
+    </script>
 </body>
 </html>
