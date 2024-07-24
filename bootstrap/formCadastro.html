@@ -38,67 +38,42 @@
             </form>
         </div>
     </nav>
+
     <!--Tela Cadastro-->
     <h1 style="text-align: center; margin-top: 55px;">Tela Cadastro</h1>
-    <form class="cadastro">
+    <div id="messagebox" style="display: none; text-align: center;"></div>
+    <form class="cadastro" method="post" action="PHP/salvarmsg.php">
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="inputEmail4">Email</label>
-            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+            <input type="email" class="form-control" id="inputEmail4" name="email" placeholder="Email">
           </div>
           <div class="form-group col-md-6">
             <label for="inputPassword4">Senha</label>
-            <input type="password" class="form-control" id="inputPassword4" placeholder="Senha">
+            <input type="password" class="form-control" id="inputPassword4" name="senha" placeholder="Senha">
           </div>
         </div>
         <div class="form-group">
           <label for="inputAddress">Endereço</label>
-          <input type="text" class="form-control" id="inputAddress" placeholder="Rua dos Bobos, nº 0">
+          <input type="text" class="form-control" id="inputAddress" name="endereco1" placeholder="Rua dos Bobos, nº 0">
         </div>
         <div class="form-group">
           <label for="inputAddress2">Endereço 2</label>
-          <input type="text" class="form-control" id="inputAddress2" placeholder="Apartamento, hotel, casa, etc.">
+          <input type="text" class="form-control" id="inputAddress2" name="endereco2" placeholder="Apartamento, hotel, casa, etc.">
         </div>
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="inputCity">Cidade</label>
-            <input type="text" class="form-control" id="inputCity">
+            <input type="text" class="form-control" id="inputCity" name="cidade">
           </div>
           <div class="form-group col-md-4">
             <label for="inputEstado">Estado</label>
-            <select id="inputEstado" class="form-control">
-              <option>AC - ACRE</option>
-              <option>AL - ALAGOAS</option>
-              <option>AP - AMAPÁ</option>
-              <option>AM - AMAZONAS</option>
-              <option>BA - BAHIA</option>
-              <option>CE - CEARÁ</option>
-              <option>DF - DISTRITO FEDERAL</option>
-              <option>ES - ESPÍRITO SANTO</option>
-              <option>GO - GOIÁS</option>
-              <option>MA - MARANHÃO</option>
-              <option>MT - MATO GROSSO</option>
-              <option>MS - MATO GROSSO DO SUL</option>
-              <option>MG - MINAS GERAIS</option>
-              <option>PA - PARÁ</option>
-              <option>PB - PARAIBA</option>
-              <option>PR - PARANÁ</option>
-              <option>PE - PERNAMBUCO</option>
-              <option>PI - PIAUÍ</option>
-              <option>RJ - RIO DE JANEIRO</option>
-              <option>RN - RIO GRANDE DO NORTE</option>
-              <option>RS - RIO GRANDE DO SUL</option>
-              <option>RO - RONDÔNIA</option>
-              <option>RR - RORAIMA</option>
-              <option>SC - SANTA CATARINA</option>
-              <option>SP - SÃO PAULO</option>
-              <option>SE - SERGIPE</option>
-              <option>TO - TOCANTINS</option>
+            <select id="inputEstado" name="estado" class="form-control">
             </select>
           </div>
           <div class="form-group col-md-2">
             <label for="inputCEP">CEP</label>
-            <input type="text" class="form-control" id="inputCEP">
+            <input type="text" class="form-control" id="inputCEP" name="cep">
           </div>
         </div>
         <div class="form-group">
@@ -111,6 +86,47 @@
         </div>
         <button type="submit" class="btn btn-primary">Entrar</button>
       </form>
+    <!--script mensagem-->
+    <script>
+      window.onload = function(){
+          const urlParams = new URLSearchParams(window.location.search);
+          const status = urlParams.get('status');
+          const messagebox = document.getElementById('messagebox');
+
+          if (status === 'success'){
+              messagebox.style.display = 'block';
+              messagebox.innerHTML = 'Mensagem enviada com sucesso!';
+              messagebox.style.color = 'green';
+          }
+          else if (status === 'error'){
+              messagebox.style.display = 'block';
+              messagebox.innerHTML = 'Houve um erro ao enviar a mensagem';
+              messagebox.style.color = 'red';
+          }
+      }
+    </script>
+    <!--Script Api-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const selectElement = document.getElementById('inputEstado');
+ 
+            // API que retorna os estados do Brasil
+            const apiUrl = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados';
+ 
+            fetch(apiUrl)
+                .then(response => response.json())
+                .then(data => {
+                    data.sort((a, b) => a.nome.localeCompare(b.nome)); // Ordena os estados por nome
+                    data.forEach(state => {
+                        const option = document.createElement('option');
+                        option.value = state.cep;
+                        option.textContent = state.nome;
+                        selectElement.appendChild(option);
+                    });
+                })
+                .catch(error => console.error('Erro ao carregar os estados:', error));
+        });
+    </script>
     <!--Script BootStrap-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
