@@ -15,13 +15,13 @@
 
     if($resultado){
         echo"<script>
-            window.location.href ='../formCadastro.html?status=success';
+            window.location.href ='../HTML/formCadastro.html?status=success';
              </script>";
     }
     
     else{
         echo"<script>
-        window.location.href ='../formCadastro.html?status=error';
+        window.location.href ='../HTML/formCadastro.html?status=error';
         </script>";
     }
 ?>

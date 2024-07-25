@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="../CSS/cadastro.css">
 
     <title>CADASTRO</title>
 </head>
@@ -42,7 +42,7 @@
     <!--Tela Cadastro-->
     <h1 style="text-align: center; margin-top: 55px;">Tela Cadastro</h1>
     <div id="messagebox" style="display: none; text-align: center;"></div>
-    <form class="cadastro" method="post" action="PHP/salvarmsg.php">
+    <form class="cadastro" method="post" action="../PHP/salvarmsg.php">
         <div class="form-row">
           <div class="form-group col-md-6">
             <label for="inputEmail4">Email</label>
@@ -95,12 +95,12 @@
 
           if (status === 'success'){
               messagebox.style.display = 'block';
-              messagebox.innerHTML = 'Mensagem enviada com sucesso!';
+              messagebox.innerHTML = 'Cadastro enviado com sucesso!';
               messagebox.style.color = 'green';
           }
           else if (status === 'error'){
               messagebox.style.display = 'block';
-              messagebox.innerHTML = 'Houve um erro ao enviar a mensagem';
+              messagebox.innerHTML = 'Houve um erro ao enviar o erro';
               messagebox.style.color = 'red';
           }
       }
@@ -136,6 +136,6 @@
         </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
-        </script>
+    </script>
 </body>
 </html>
