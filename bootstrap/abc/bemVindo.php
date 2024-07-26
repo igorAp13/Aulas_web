@@ -1,3 +1,14 @@
+<?php
+session_start();
+if(isset($_SESSION['email'])){
+    $nomeUsuario = $_SESSION['email'];   
+}
+
+else{
+    header("location: login.html");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -8,7 +19,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Olá, [Nome do Funcionário]!</h1>
+        <h1>Olá, <?php echo htmlspecialchars ($nomeUsuario) ?>!</h1>
         <p>Hoje é dia <span id="dataAtual"></span>.</p>
         <p>Clique no menu e escolha o que deseja fazer:</p>
         <div class="menu">
