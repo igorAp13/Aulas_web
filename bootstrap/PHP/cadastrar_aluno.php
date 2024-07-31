@@ -1,5 +1,7 @@
 <?php
+    session_start();
     include 'conexaoBD.php';
+
     if(isset($_POST['btnCad'])){ 
     $nome = filter_input(INPUT_POST, 'nome' , FILTER_SANITIZE_STRING);
     $cpf = filter_input(INPUT_POST, 'cpf' , FILTER_SANITIZE_STRING);
@@ -43,6 +45,8 @@
         else{
             echo "Erro ao cadastro aluno: " . $declaracao->error;
         }
+        $declaracao->close();
+        $conexao->close();
     }
 
     if(isset($_POST['btnCpf'])){
@@ -64,12 +68,16 @@
             $_SESSION['whatsapp'] = $whatsapp;
             $_SESSION['email'] = $email;
             $_SESSION['categoria'] = $categoria;
-            header("Location ../HTML/cad_aluno.php");
+
+            header("Location: ../HTML/cadAluno.php");
+            exit;
+
         }
 
         else{
             echo"<script>
                     alert ('CPF não encontrado!')
+                    window.location.href ='../HTML/cadAluno.php'
                  </script>";
         }
 
