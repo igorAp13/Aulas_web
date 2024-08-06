@@ -18,6 +18,19 @@
         $conexao->close();
         exit();
     }
+    
+    if(isset($_POST['editar_id'])){
+        $idEditar = $_GET['editar_id'];
+        echo"<script>
+                if(confirm('Você deseja editar esssa aula?')){
+                    window.location.href = '../HTML/cadastrarAula.php'
+                }        
+                else{
+                    window.location.href = '../HTML/tabelaAula.php'
+                }
+            </script>";
+    }
+
     $sql = "SELECT * FROM aula";
     $results = '';
 
@@ -53,9 +66,9 @@
                                     <button type='submit' name='delete'>Deletar</button>
                                 </form>
 
-                                <form action='#' method='get' style='display:inline;'>
-                                    <input type='hidden' name='id' value='{$linha['idaula']}'>
-                                    <button type='submit' name='edit'>Editar</button>
+                                <form action='../PHP/buscaAula.php' method='post' style='display:inline;'>
+                                    <input type='hidden' name='editar_id' value='{$linha['idaula']}'>
+                                    <button type='submit' name='editar' onclick='return confirmaEdicao(this.form)'>Editar</button>
                                 </form>
                             </td>
                         </tr>";
@@ -71,3 +84,5 @@
         header("Location: ../HTML/tabelaAula.php?results=".urlencode($results));
         exit();
 ?>
+
+    
