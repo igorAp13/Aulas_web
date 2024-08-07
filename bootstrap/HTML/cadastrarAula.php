@@ -20,7 +20,7 @@
         $aluno = '';
         $data = '';
         $hora = '';
-        $paga = '';
+        $pago = '';
         $carro = '';
         
         // Verifica se um ID foi passado na URL
@@ -43,8 +43,8 @@
                 $aluno = $linha['aluno'];
                 $data = date('Y-m-d', strtotime($linha['data']));
                 $hora = $linha['hora'];
-                $paga = $linha['paga'];
-                $carro = $linha['veiculo'];
+                $pago = $linha['pago'];
+                $veiculo = $linha['veiculo'];
             }
             
             $stmt->close();
@@ -72,15 +72,15 @@
             <input type="time" id="hora" name="hora" value="<?php echo $hora; ?>" required>
             
             <label for="paga">Aula Paga?</label>
-            <select id="paga" name="paga">
-                <option value="sim" <?php if ($paga == 'sim') echo 'selected'; ?>>Sim</option>
-                <option value="nao"<?php if ($paga == 'não') echo 'selected'; ?>>Não</option>
+            <select id="pagoId" name="pago">
+                <option value="sim" <?php if ($pago == 'sim') echo 'selected'; ?>>Sim</option>
+                <option value="nao"<?php if ($pago == 'nao') echo 'selected'; ?>>Não</option>
             </select>
             
             <label for="carro">Marca do Carro:</label>
-            <input type="text" id="carro" name="carro" value="<?php echo $carro; ?>" required>
+            <input type="text" id="carro" name="veiculo" value="<?php echo $carro; ?>" required>
             
-            <button type="submit" class="button">Agendar</button>
+            <button type="submit" class="button" name="agendar">Agendar</button>
         </form>
     </div>
 </body>

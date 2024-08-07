@@ -20,15 +20,16 @@
     }
     
     if(isset($_POST['editar_id'])){
-        $idEditar = $_GET['editar_id'];
+        $id = $_POST['editar_id'];
         echo"<script>
                 if(confirm('Você deseja editar esssa aula?')){
-                    window.location.href = '../HTML/cadastrarAula.php'
+                    window.location.href = '../HTML/cadastrarAula.php?id=$id'
                 }        
                 else{
                     window.location.href = '../HTML/tabelaAula.php'
                 }
             </script>";
+            exit();
     }
 
     $sql = "SELECT * FROM aula";
