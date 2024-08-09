@@ -53,23 +53,23 @@
         $conexao->close();
         ?>
         <form action="../PHP/editarSalvarAulas.php" method="post">
-        <input type="hidden" name="id" value="<?php echo $id; ?>">
+        <input type="hidden" name="idEditar" value="<?php echo $id; ?>">
             <label for="instrutor">Nome do Instrutor:</label>
-            <input type="text" id="instrutor" name="instrutor" value="<?php echo $instrutor; ?>" >
+            <input type="text" id="instrutorID" name="instrutor" value="<?php echo $instrutor; ?>" >
 
             <label for="aluno">CPF do Aluno:</label>
-            <input type="text" id="cpf" name="cpf"value="<?php echo $cpf; ?>" >
+            <input type="text" id="cpfID" name="cpf"value="<?php echo $cpf; ?>">
 
             <button type="submit" class="button">Buscar</button>
 
             <label for="aluno">Nome do Aluno:</label>
-            <input type="text" id="aluno" name="aluno" value="<?php echo $aluno; ?>" required>
+            <input type="text" id="alunoID" name="aluno" value="<?php echo $aluno; ?>" required>
             
             <label for="data">Data:</label>
-            <input type="date" id="data" name="data" value="<?php echo $data; ?>" required>
+            <input type="date" id="dataID" name="data" value="<?php echo $data; ?>" required>
             
             <label for="hora">Hora:</label>
-            <input type="time" id="hora" name="hora" value="<?php echo $hora; ?>" required>
+            <input type="time" id="horaID" name="hora" value="<?php echo $hora; ?>" required>
             
             <label for="paga">Aula Paga?</label>
             <select id="pagoId" name="pago">
@@ -78,7 +78,7 @@
             </select>
             
             <label for="carro">Marca do Carro:</label>
-            <input type="text" id="carro" name="veiculo" value="<?php echo $carro; ?>" required>
+            <input type="text" id="carro" name="veiculo" value="<?php echo $veiculo; ?>" required>
             
             <button type="submit" class="button" name="agendar">Agendar</button>
         </form>
