@@ -1,12 +1,12 @@
 <?php
 session_start();
-if(isset($_SESSION['email'])){
+/*if(isset($_SESSION['email'])){
     $nomeUsuario = $_SESSION['email'];   
 }
 
 else{
     header("location: login.html");
-}
+}*/
 ?>
 
 <!DOCTYPE html>
@@ -15,17 +15,21 @@ else{
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style1.css">
+    <link rel="stylesheet" type="text/css" href="../CSS/style2.css">
     <title>Página Inicial - Autoescola</title>
 </head>
 <body>
+    <?php
+        include_once "../HTML/navegador.php";
+    ?>
     <div class="container">
         <h1>Olá, <?php echo htmlspecialchars ($nomeUsuario) ?>!</h1>
         <p>Hoje é dia <span id="dataAtual"></span>.</p>
         <p>Clique no menu e escolha o que deseja fazer:</p>
         <div class="menu">
             <a href="../HTML/cadAluno.php ">Cadastrar Aluno</a>
-            <a href="#cadastrarCarro">Cadastrar Carro</a>
-            <a href="#agendarAula">Agendar Aula</a>
+            <a href="#">Cadastrar Carro</a>
+            <a href="../HTML/cadastrarAula.php">Agendar Aula</a>
         </div>
     </div>
 
