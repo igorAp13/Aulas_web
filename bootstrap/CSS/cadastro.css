@@ -1,11 +1,12 @@
 body{
+  
     font-family: 'Abel', 'Courier New';
     margin: 0;
     padding: 0;
     background-color: rgba(231, 212, 189, 0.473);
     color: #333;
 }
- 
+
 .login{
     background-color: rgba(231, 212, 189, 0.473);
     max-width: 25%;
@@ -59,5 +60,5 @@ nav{
 div{
     margin-left: 20px;
 }
- 
+
 

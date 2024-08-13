@@ -1,3 +1,14 @@
+<?php
+    session_start();
+    /*if(isset($_SESSION['nome'])){
+        $nomeUsuario = $_SESSION['nome'];
+    }
+
+    else{
+        header("location: login.html");
+    }*/ 
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -66,13 +77,19 @@
             <input type="text" name="nome_aluno" placeholder="Nome do Aluno">
             <button type="submit">Buscar</button>
         </form>
+        <?php
+            if(isset($_SESSION['msg'])){
+                echo "<p style = 'color: #0000FF; text-align: center'> {$_SESSION['msg']} </p>";
+                unset($_SESSION['msg']);
+            }
+        ?>
         <table id="classes-table">
             <thead>
                 <tr>
                     <th>Data</th>
                     <th>Hora</th>
                     <th>Instrutor</th>
-                    <th>Aluno</th>
+                    <th>'Aluno'</th>
                     <th>Veículo</th>
                     <th>Opção</th>
                 </tr>
@@ -80,8 +97,9 @@
             <tbody>
                 <!-- As aulas serão inseridas aqui -->
                 <?php
-                    if (isset($_GET['results'])) {
-                        echo $_GET['results'];
+                    if(isset($_SESSION['results'])){
+                        echo $_SESSION['results'];
+                        unset($_SESSION['results']);
                     }
                 ?>
             </tbody>
