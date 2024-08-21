@@ -8,6 +8,8 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+
+    /*padding-top: 60px;*/
 }
 .container {
     background-color: #fff;

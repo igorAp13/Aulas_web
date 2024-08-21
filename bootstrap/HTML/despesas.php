@@ -1,5 +1,11 @@
+<?php
+    include '../php/conexaoBD.php';
+    session_start();
+?>
 <!--CRIANDO AS LISTAS-->
 <?php
+    $contas = $_SESSION['contas']??'';
+    $totalFormatado = $_SESSION['totalFormatado']??'0,00';
     $despesas = ["Depesas com Funcionário"=>["Salario","Vale transporte","Vale alimentação"],"Despesas com Carros"=>["Oficina","Gasolina","Lavagem"],"Despesas Fixas"=>["Luz","Agua","Aluguel"],"Despesas Eventuais"=>["Solicitar autorizaçao"]];
 
     $tipoSelecionado = $_POST["tipo"]??'';
@@ -32,6 +38,8 @@
     </form>
     
     <form action="../PHP/contas.php" method="post">
+        <input type="hidden" name="tipo" value="<?php echo $tipoSelecionado; ?>">
+
         <label for="descricao">Descrição:</label>
         <select name="descricao" id="descricao" required>
             <?php
@@ -57,6 +65,7 @@
                     ?>
             <label for="data">Data:</label>
             <input type="date" id="data" name="data" <?php date("Y-m-d");?> min =<?=$min->format("Y-m-d")?> max =<?=$max->format("Y-m-d")?> required>
+
             <button class="button" type="submit">Cadastrar</button>
     </form>
     
@@ -72,11 +81,11 @@
             </tr>
         </thead>
         <tbody>
-            <!-- Adicione as linhas de despesas aqui -->
+            <?php echo $contas?>
         </tbody>
     </table>
 
-    <h3>Total:<!-- <?php echo number_format($total, 2, ',', '.'); ?>--></h3>
+    <h3> Total: R$ <?php echo $totalFormatado; ?> </h3>
 </div>
 </body>
 </html>

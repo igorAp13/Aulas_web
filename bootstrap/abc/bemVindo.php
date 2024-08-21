@@ -1,12 +1,12 @@
 <?php
 session_start();
-/*if(isset($_SESSION['email'])){
+if(isset($_SESSION['email'])){
     $nomeUsuario = $_SESSION['email'];   
 }
 
 else{
     header("location: login.html");
-}*/
+}
 ?>
 
 <!DOCTYPE html>
